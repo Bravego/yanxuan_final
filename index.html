@@ -4,8 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>yanxuan_final</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1075400_fvnpehqsn6g.css">
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+    </script>
   </head>
   <body>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      //rem适配
+      !(function () {
+        var width = document.documentElement.clientWidth;
+        var styleNode = document.createElement('style')
+        styleNode.innerHTML = 'html{font-size: ' + width / 8 + 'px !important;}'
+        document.head.appendChild(styleNode)
+      })()
+    </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
