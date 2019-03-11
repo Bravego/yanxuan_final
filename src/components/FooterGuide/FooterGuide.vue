@@ -4,19 +4,19 @@
       <i class="iconfont icon-shouye"></i>
       <span class="text">首页</span>
     </a>
-    <a href="javascript:;" class="item" @click="goTo('category')" :class="{active:isCurrentClass('/category')}">
+    <a href="javascript:;" class="item" @click="goTo('/category')" :class="{active:isCurrentClass('/category/cateDetail')}">
       <i class="iconfont icon-filing-cabinet"></i>
       <span class="text">分类</span>
     </a>
-    <a href="javascript:;" class="item" @click="goTo('topic')" :class="{active:isCurrentClass('/topic')}">
+    <a href="javascript:;" class="item" @click="goTo('/topic')" :class="{active:isCurrentClass('/topic')}">
       <i class="iconfont icon-weibiaoti2"></i>
       <span class="text">识物</span>
     </a>
-    <a href="javascript:;" class="item" @click="goTo('cart')" :class="{active:isCurrentClass('/cart')}">
+    <a href="javascript:;" class="item" @click="goTo('/cart')" :class="{active:isCurrentClass('/cart')}">
       <i class="iconfont icon-gouwuche"></i>
       <span class="text">购物车</span>
     </a>
-    <a href="javascript:;" class="item" @click="goTo('profile')" :class="{active:isCurrentClass('/profile')}">
+    <a href="javascript:;" class="item" @click="goTo('/profile')" :class="{active:isCurrentClass('/profile')}">
       <i class="iconfont icon-icon03"></i>
       <span class="text">个人</span>
     </a>
@@ -32,7 +32,8 @@
           },
           //切换类名
           isCurrentClass(path){
-            return path === this.$route.fullPath
+
+            return (path === this.$route.fullPath || this.$route.fullPath.indexOf(path) != -1)
           }
         }
     }

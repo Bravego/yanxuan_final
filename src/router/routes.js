@@ -4,6 +4,10 @@ import Cart from '../pages/Cart/Cart.vue'
 import Topic from '../pages/Topic/Topic.vue'
 import Profile from '../pages/Profile/Profile.vue'
 
+//二级路由
+import CategoryDetail from '../pages/CategoryDetail/CategoryDetail.vue'
+
+
 export default [
   {
     path:'/',
@@ -15,7 +19,17 @@ export default [
   },
   {
     path:'/category',
-    component: Category
+    component: Category,
+    children:[
+      {
+        path:'/category/',
+        redirect: '/category/cateDetail/1022001'
+      },
+      {
+        path:'/category/cateDetail/:id',
+        component: CategoryDetail
+      }
+    ]
   },
   {
     path:'/cart',
