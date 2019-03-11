@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-container">
+  <footer class="footer-container" v-show="$route.meta.showFooter">
     <a href="javascript:;" class="item" @click="goTo('/msite')" :class="{active:isCurrentClass('/msite')}">
       <i class="iconfont icon-shouye"></i>
       <span class="text">首页</span>
