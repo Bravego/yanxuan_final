@@ -1,2 +1,6 @@
 export const RECEIVE_INDEX = 'receive_index'
 export const RECEIVE_CATEGORY = 'receive_category'
+export const RECEIVE_NAV_CONTENT = 'receive_nav_content'
+export const RECEIVE_RECOMMED = 'receive_recommed'
+export const RECEIVE_OTHER = 'receive_other'
+export const RECEIVE_BUYER_SHOWS = 'receive_buyer_shows'

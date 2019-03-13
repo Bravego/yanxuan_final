@@ -49,7 +49,7 @@
         <div class="logPhone" @click="checkLogin">
           <span>登录</span>
         </div>
-        <div class="logMail" @click="">
+        <div class="logMail" @click="$router.replace('/profile')">
           <span>其他方式登录</span>
         </div>
         <p class="register" v-show="$route.params.boolean">

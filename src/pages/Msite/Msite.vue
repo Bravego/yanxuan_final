@@ -3,11 +3,11 @@
       <header class="header">
         <div class="title">
           <a href="javascript:;" class="logo"></a>
-          <div class="input">
+          <div class="input" @click="$router.push('/search')">
             <i class="iconfont icon-search-b"></i>
             <span class="placeholder">搜索商品, 共21738款好物</span>
           </div>
-          <div class="login">
+          <div class="login" @click="$router.push('/profile')">
             登录
           </div>
         </div>
@@ -206,9 +206,7 @@
               })
             })
          })
-        /*this.$get('/index').then((res)=>{
-            console.log(res)
-        })*/
+
 
       },
       computed:{
@@ -277,12 +275,12 @@
             color #666
             font-size .28rem
         .login
-          width .9rem;
-          height .5rem;
+          width 74px;
+          height 40px;
           line-height .5rem;
           font-size .32rem
           color #b4282d
-          border 1px solid #b4282d
+          border 2px solid #b4282d
           border-radius .10667rem
           text-align center
       .nav-wrap

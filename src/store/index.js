@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import state from './state'
 import mutations from './mutations'
 import actions from './actions'
-
+import topic from './modules/topic'
 
 //声明使用vuex
 Vue.use(Vuex)
@@ -12,5 +12,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state,
   mutations,
-  actions
+  actions,
+  modules:{
+    topic
+  }
 })
